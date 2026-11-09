@@ -15,20 +15,24 @@
                 Konversi Celsius ke Fahrenheit, Reamur, dan Kelvin.
             </p>
 
-            <section>
-                <p class="example">Celsius ke Fahrenheit</p>
-                <p id="fahrenheit" class="result"></p>
-            </section>
+            <div class="input-group">
+                <label for="Celsius">Masukkan Celsius (&deg;C)</label>
+                <input type="number" id="celsius" placeholder="Contoh: 25">
+            </div>
 
-            <section>
-                <p class="example">Celsius ke Reamur</p>
-                <p id="reamur" class="result"></p>
-            </section>
-
-            <section>
-                <p class="example">Celsius ke Kelvin</p>
-                <p id="kelvin" class="result"></p>
-            </section>
+            <table>
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Celsius</th>
+                        <th>Fahrenheit</th>
+                        <th>Reamur</th>
+                        <th>Kelvin</th>
+                    </tr>
+                </thead>
+                <tbody id="resultTable">
+                </tbody>
+            </table>
         </main>
 
         <script src="script.js"></script>
