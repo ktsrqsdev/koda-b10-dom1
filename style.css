@@ -27,20 +27,45 @@ h1 {
     margin: 10px 0 24px;
     color: #64748b;
 }
-.example {
-    margin: 0;
-    color: #64748b;
-}
-.result {
-    margin: 12px 0 0;
-    padding: 14px;
-    border-radius: 9px;
-    background: #eff6ff;
-    color: #1e40af;
-    font-size: 22px;
-    font-weight: 700;
+.input-group{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 24px;
 }
 
-section + section {
-    margin-top: 18px;
+.input-group label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #64748b;
+}
+
+.input-group input {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    outline: none;
+}
+
+.input-group input:focus{
+    border-color: #1e40af;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 14px;
+}
+
+th {
+    background-color: #eff6ff;
+    color: #1e40af;
 }
