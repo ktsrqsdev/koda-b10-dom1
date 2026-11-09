@@ -1,25 +1,27 @@
+const calc = document.getElementById("calc");
 const celsiusInput = document.getElementById("celsius");
 const resultTable = document.getElementById("resultTable");
 let count = 0;
 
 function convertToFahrenheit(celsius) {
-    return (celsius * 9 / 5) + 32;
+    return (celsius * 9) / 5 + 32;
 }
 
 function convertToReamur(celsius) {
-    return celsius * 4 / 5;
+    return (celsius * 4) / 5;
 }
 
 function convertToKelvin(celsius) {
     return celsius + 273.15;
 }
 
-celsiusInput.addEventListener("keydown", function() {
-    const value = celsiusInput.value;
+calc.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-    if (value === "") return;
+    if (celsiusInput.value === "") return;
 
-    const celsius = parseFloat(value);
+    const celsius = parseFloat(celsiusInput.value);
+    if (isNaN(celsius)) return;
     const fahrenheit = convertToFahrenheit(celsius);
     const reamur = convertToReamur(celsius);
     const kelvin = convertToKelvin(celsius);
@@ -37,4 +39,7 @@ celsiusInput.addEventListener("keydown", function() {
     `;
 
     resultTable.innerHTML += row;
+
+    celsiusInput.value = "";
+    celsiusInput.focus();
 });

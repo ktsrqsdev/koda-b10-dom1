@@ -38,9 +38,16 @@ h1 {
     font-weight: bold;
     font-size: 14px;
     color: #64748b;
+
 }
 
-.input-group input {
+.field-row {
+    display: flex;
+    gap: 8px;
+}
+
+.field-row input {
+    width: 100%;
     padding: 12px;
     font-size: 16px;
     border: 1px solid #cbd5e1;
@@ -48,8 +55,22 @@ h1 {
     outline: none;
 }
 
-.input-group input:focus{
+.field-row input:focus{
     border-color: #1e40af;
+}
+
+.field-row button {
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #1e40af;
+    border: none;
+    border-radius: 8px;
+}
+
+.field-row button:hover{
+    background-color: #1d4ed8;
 }
 
 table {

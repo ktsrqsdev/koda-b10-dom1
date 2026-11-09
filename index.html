@@ -14,12 +14,13 @@
             <p class="description">
                 Konversi Celsius ke Fahrenheit, Reamur, dan Kelvin.
             </p>
-
-            <div class="input-group">
-                <label for="Celsius">Masukkan Celsius (&deg;C)</label>
-                <input type="number" id="celsius" placeholder="Contoh: 25">
-            </div>
-
+            <form id="calc" class="input-group">
+                <label for="celsius">Masukkan Celsius (&deg;C)</label>
+                <div class="field-row">
+                    <input type="number" id="celsius" placeholder="Contoh: 25" step="any" required>
+                    <button type="submit">Hitung</button>
+                </div>
+            </form>
             <table>
                 <thead>
                     <tr>
