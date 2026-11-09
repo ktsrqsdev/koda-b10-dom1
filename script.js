@@ -1,7 +1,6 @@
-
-const resultFahrenheit = document.getElementById("fahrenheit");
-const resultReamur = document.getElementById("reamur");
-const resultKelvin = document.getElementById("kelvin");
+const celsiusInput = document.getElementById("celsius");
+const resultTable = document.getElementById("resultTable");
+let count = 0;
 
 function convertToFahrenheit(celsius) {
     return (celsius * 9 / 5) + 32;
@@ -15,17 +14,27 @@ function convertToKelvin(celsius) {
     return celsius + 273.15;
 }
 
-const temperature = 25;
+celsiusInput.addEventListener("keydown", function() {
+    const value = celsiusInput.value;
 
-const fahrenheit = convertToFahrenheit(temperature);
-const reamur = convertToReamur(temperature);
-const kelvin = convertToKelvin(temperature);
+    if (value === "") return;
 
-resultFahrenheit.textContent =
-    temperature + "°C = " + fahrenheit + "°F";
+    const celsius = parseFloat(value);
+    const fahrenheit = convertToFahrenheit(celsius);
+    const reamur = convertToReamur(celsius);
+    const kelvin = convertToKelvin(celsius);
 
-resultReamur.textContent =
-    temperature + "°C = " + reamur + "°R";
+    count++;
 
-resultKelvin.textContent =
-    temperature + "°C = " + kelvin + " K";
+    const row = `
+    <tr>
+        <td>${count}</td>
+        <td>${celsius} °C</td>
+        <td>${fahrenheit} °F</td>
+        <td>${reamur} °R</td>
+        <td>${kelvin} K</td>
+    </tr>
+    `;
+
+    resultTable.innerHTML += row;
+});
