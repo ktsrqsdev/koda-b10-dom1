@@ -5,3 +5,4 @@ project ini bertujuan untuk belajar bagaimana cara menggunakan DOM. kali ini say
 ![Old Result](image.png)
 ### New Result
 ![New Result](result.gif)
+![alt text](image-1.png)
